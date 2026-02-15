@@ -1,6 +1,6 @@
 # @node2flow/gmail-mcp
 
-[![smithery badge](https://smithery.ai/badge/node2flow/gmail)](https://smithery.ai/server/node2flow/gmail)
+[![smithery badge](https://smithery.ai/badge/node2flow/gmail-mcp)](https://smithery.ai/server/node2flow/gmail-mcp)
 [![npm version](https://img.shields.io/npm/v/@node2flow/gmail-mcp.svg)](https://www.npmjs.com/package/@node2flow/gmail-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
