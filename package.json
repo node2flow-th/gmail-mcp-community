@@ -1,6 +1,6 @@
 {
   "name": "@node2flow/gmail-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Gmail — send, search, read, organize emails and manage labels through 28 tools",
   "type": "module",
   "main": "dist/index.js",
