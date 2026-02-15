@@ -280,7 +280,9 @@ export const TOOLS: MCPToolDefinition[] = [
     description: 'List all labels in the mailbox, including system labels (INBOX, SENT, etc.) and user-created labels.',
     inputSchema: {
       type: 'object',
-      properties: {},
+      properties: {
+        visibility: { type: 'string', description: 'Filter labels by visibility: "labelShow", "labelShowIfUnread", or "labelHide". Omit to return all labels' },
+      },
     },
     annotations: { title: 'List Labels', readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
   },
@@ -448,7 +450,9 @@ export const TOOLS: MCPToolDefinition[] = [
     description: 'Get the authenticated user\'s Gmail profile — email address, total message count, total thread count, and history ID.',
     inputSchema: {
       type: 'object',
-      properties: {},
+      properties: {
+        format: { type: 'string', description: 'Response detail level: "full" (default) returns all profile fields, "minimal" returns only email address' },
+      },
     },
     annotations: { title: 'Get Profile', readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
   },
