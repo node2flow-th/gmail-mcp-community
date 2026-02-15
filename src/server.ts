@@ -341,15 +341,12 @@ export function createServer(config?: GmailMcpConfig) {
 
   // Override tools/list handler to return raw JSON Schema with property descriptions
   (server as any).server.setRequestHandler(ListToolsRequestSchema, () => ({
-    tools: TOOLS.map(tool => {
-      const hasProperties = Object.keys(tool.inputSchema.properties).length > 0;
-      return {
-        name: tool.name,
-        description: tool.description,
-        ...(hasProperties ? { inputSchema: tool.inputSchema } : {}),
-        annotations: tool.annotations,
-      };
-    }),
+    tools: TOOLS.map(tool => ({
+      name: tool.name,
+      description: tool.description,
+      inputSchema: tool.inputSchema,
+      annotations: tool.annotations,
+    })),
   }));
 
   return server;
