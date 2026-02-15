@@ -1,0 +1,51 @@
+{
+  "name": "@node2flow/gmail-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Gmail — send, search, read, organize emails and manage labels through 28 tools",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "gmail-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "deploy": "wrangler deploy",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "gmail",
+    "google",
+    "email",
+    "mail",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "claude",
+    "cursor"
+  ],
+  "author": "Node2Flow <node2flow@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/node2flow-th/gmail-mcp-community",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node2flow-th/gmail-mcp-community.git"
+  },
+  "bugs": {
+    "url": "https://github.com/node2flow-th/gmail-mcp-community/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.0.0"
+  }
+}
